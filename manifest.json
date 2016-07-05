@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Getting started example",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.0",
+
+  "permissions": [
+    "http://www.spiegel.de/",
+    "https://www.spiegel.de/",
+    "activeTab",
+            "webNavigation",
+            "https://ajax.googleapis.com/"
+  ],
+  "page_action": {
+    "default_icon": "tw_spon.png",
+    "default_popup": "popup.html",
+    "default_title": "Paywall entsperren"
+  },
+  "background": {
+    "scripts": ["bootstrap.js"],
+    "persistent": false
+  }
+}
