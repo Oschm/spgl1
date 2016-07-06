@@ -3,7 +3,7 @@ changePage();
 
 function changePage(){
 
-debugger;
+
 var x = document.getElementsByClassName("obfuscated-content");
  var b=x[0].parentElement.parentElement;
  b.removeChild(b.children[2]);
