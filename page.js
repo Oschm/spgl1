@@ -3,7 +3,6 @@ changePage();
 
 function changePage(){
 
-
 var x = document.getElementsByClassName("obfuscated-content");
  var b=x[0].parentElement.parentElement;
  b.removeChild(b.children[2]);
@@ -27,13 +26,33 @@ function CaesarCipher(str) {
   
     var result = '';
     var charcode = 0;
-
+    var headline=false;
     for (i = 0; i < str.length; i++) {
-    	if(charcode===31)
+       debugger;
+       charcode = (str[i].charCodeAt()) ;
+        if(charcode===60){
+
+             headline=true;
+             result += String.fromCharCode(charcode);
+             continue;
+        }if(charcode===62){
+            result += String.fromCharCode(charcode);
+            headline=false;
+             continue;
+        }
+        if(headline){
+            result += String.fromCharCode(charcode);
+             continue;
+        }
+        
+
+
+    	if(charcode===32)
     	{
     		result += " ";
+            continue;
     	}
-        charcode = (str[i].charCodeAt()) -1;
+        charcode=charcode-1;
         result += String.fromCharCode(charcode);
     }
     return result;
