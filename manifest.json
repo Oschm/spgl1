@@ -1,24 +1,20 @@
 {
-  "manifest_version": 2,
-
-  "name": "Getting started example",
-  "description": "This extension shows a Google Image search result for the current page",
-  "version": "1.0",
-
-  "permissions": [
-    "http://www.spiegel.de/",
-    "https://www.spiegel.de/",
-    "activeTab",
-            "webNavigation",
-            "https://ajax.googleapis.com/"
-  ],
-  "page_action": {
-    "default_icon": "tw_spon.png",
-    "default_popup": "popup.html",
-    "default_title": "Paywall entsperren"
+  "name" : "Spiegelhacker",
+  "version" : "1.1",
+  "description" : "asdasd",
+  "background" : {
+    "scripts" : ["jquery-3.0.0.min.js","background.js","popup.js","page.js"],
+    "persistent" : false
   },
-  "background": {
-    "scripts": ["bootstrap.js"],
-    "persistent": false
-  }
+  "page_action" :
+  {
+    "default_icon": "tw_spon.png",
+    "default_title" : "HackSpiegel!",
+    "default_popup": "popup.html"
+   
+  },
+  "permissions":  ["declarativeContent", "activeTab"] ,
+  
+  "manifest_version": 2
+
 }

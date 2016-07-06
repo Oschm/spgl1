@@ -5,7 +5,6 @@
 // When the extension is installed or upgraded ...
 chrome.runtime.onInstalled.addListener(function() {
   // Replace all rules ...
-  
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     // With a new rule ...
     chrome.declarativeContent.onPageChanged.addRules([
@@ -22,13 +21,3 @@ chrome.runtime.onInstalled.addListener(function() {
     ]);
   });
 });
-
-$( document ).ready(function() {
-  document.getElementById("myButton").addEventListener("click", hackSpiegel);
-});
-function hackSpiegel(){
-chrome.tabs.getSelected(null, function(tab) {
-chrome.tabs.executeScript(tab.id, {"file" : "page.js"}) ;
-});
-  
-}
