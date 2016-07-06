@@ -2,7 +2,7 @@ changePage();
 
 
 function changePage(){
-document.title='asasd';
+
 debugger;
 var x = document.getElementsByClassName("obfuscated-content");
  var b=x[0].parentElement.parentElement;
