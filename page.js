@@ -6,9 +6,9 @@ function changePage(){
 var x = document.getElementsByClassName("obfuscated-content");
  var b=x[0].parentElement.parentElement;
  b.removeChild(b.children[2]);
- var x = document.querySelectorAll('div[class^="lp_mwi_svg-filter-blur"]');
- 
- x[0].className="";
+ var x = document.getElementsByClassName("obfuscated-content");
+ var obf =x[0].parentElement;
+ obf.className="";
 
 
  
